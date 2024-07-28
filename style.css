@@ -10,43 +10,52 @@
 /* Font section done 
 ______________________________________ */
 
-
-/* Shared Styles  */
-.display-flex {
+/* shared styles */
+.display-flex{
   display: flex;
 }
 
-/* Dark-02 */
-.text-gray {
-  color: rgb(66, 66, 66); 
+.text-primary{
+  color: #FF900E;
 }
 
-/* Dark-03 */
-.text-light-gray {
-  color: rgb(114, 114, 114) ;
+/* dark 02 */
+.text-gray{
+  color: #424242;
 }
 
-.bg-light {
+/* dark03 */
+.text-light-gray{
+  color: #727272;
+}
+
+.bg-light{
   background-color: rgba(255, 144, 14, 0.1);
 }
 
-.btn-primary {
-  background-color: rgb(255, 144, 14);
+.btn-primary{
+  background-color: #FF900E;
   color: white;
-  border-radius: 8px;
   padding: 20px 25px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  border-radius: 8px;
   border: none;
 }
 
-main {
-  max-width: 1200px;
+main{
+  max-width: 1440px;
   margin: 0 auto;
 }
- main > section {
-  margin-top: 100px;
- }
+
+main > section{
+  margin-top: 130px;
+}
+
+.section-title{
+  font-size: 2.8rem;
+  font-weight: 700;
+}
 
 
 
@@ -64,30 +73,35 @@ main {
   align-items: center;
 
 }
-.nav-item {
-  list-style: none;
-  margin-right: 30px;
-  
-
-}
-.nav-link {
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.navbar, .banner {
-  min-width: 1140px;
-  margin: 0 auto;
-}
-
 .brand {
   font-weight: 700;
   font-size: 2.6rem;
 }
 
 
+.nav-item {
+  list-style: none;
+  margin-right: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar, .banner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+
+
 
 /* Banner related style */
+.banner {
+ 
+}
+
 .banner-content {
   max-width: 850px;
   margin: 0 auto;
@@ -101,8 +115,13 @@ main {
 }
 
 .banner-image {
-  width: 100%; 
+  max-width: 100%; 
+  /* border: 2px solid blue ; */
+  
+
 }
+
+
 
 /* team and features related  */
 .teams {
@@ -133,8 +152,23 @@ main {
 /* Responsive  */
 
 @media screen and (max-width: 576px) {
-  .navbar, .nav-link{
-    flex-direction: column;
+    .navbar, 
+    .nav-links, 
+    .features,
+    .teams{
+        flex-direction: column;
+    }
+
+    .team-img-container, 
+    .facts-container, 
+    .sponsor-companies
+    {
+        grid-template-columns: 1fr;
+    }
+    .facts-container{
+      justify-items: center;
+      gap: 24px;
   }
+
   
 }
